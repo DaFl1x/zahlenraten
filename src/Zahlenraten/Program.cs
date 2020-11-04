@@ -21,7 +21,7 @@ namespace Zahlenraten
             Console.WriteLine("Bitte geben sie eine Zahl von " + min + " bis " + max + " an:");
 
             // Now you can't guess the number by entering text
-            int guessedNumber = min 0;
+            int guessedNumber = 1;
 
             // 
             bool inputIsText = true;
