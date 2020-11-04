@@ -7,8 +7,8 @@ namespace Zahlenraten
         static void Main(string[] args)
         {
             // The min and max values aren't needed right now, but maybe in the future we want to easily increase the difficulty (or just time consumption) of this game
-            int min = -50; 
-            int max = 50;   
+            int min = 1; 
+            int max = 100;   
  
             // Generates a new random number between min and max
             Random random = new Random();
@@ -23,8 +23,11 @@ namespace Zahlenraten
             // Now you can't guess the number by entering text
             int guessedNumber = 1;
 
-            // 
+            // Later on, if the input is not text, this boolean will be set to false
             bool inputIsText = true;
+
+            // Name says it all
+            int trysNeeded = 0;
 
             for (; ; )
             {
@@ -44,6 +47,8 @@ namespace Zahlenraten
 
                 if (inputIsText == false)
                 {
+                    // Every time you input a number, it adds one try
+                    trysNeeded = trysNeeded + 1;
 
                     // The input should be from min to max, nothing above. You can enter something above, I don't care. But it wont help you with the guessing...
                     if (guessedNumber > max)
@@ -81,7 +86,7 @@ namespace Zahlenraten
 
             }
 
-            Console.WriteLine("--== ENDE ==--");
+            Console.WriteLine("--== Bravo! Du hast " + trysNeeded + " Versuche gebraucht. ==--");
         }
     }
 }
