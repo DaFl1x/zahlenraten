@@ -21,7 +21,10 @@ namespace Zahlenraten
             Console.WriteLine("Bitte geben sie eine Zahl von " + min + " bis " + max + " an:");
 
             // Now you can't guess the number by entering text
-            int guessedNumber = min - 50;
+            int guessedNumber = min 0;
+
+            // 
+            bool inputIsText = true;
 
             for (; ; )
             {
@@ -29,44 +32,51 @@ namespace Zahlenraten
                 try
                 {
                     guessedNumber = Convert.ToInt32(Console.ReadLine());
+                    inputIsText = false;
                 }
 
                 catch
                 {
                     // Error: User can't read instructions
                     Console.WriteLine("Bitte geben sie nur Zahlen an!");
+                    inputIsText = true;
                 }
 
-                // The input should be from min to max, nothing above. You can enter something above, I don't care. But it wont help you with the guessing...
-                if (guessedNumber > max)
+                if (inputIsText == false)
                 {
-                    Console.WriteLine("Sie können zwar eine Zahl über " + max + " anegeben, die zufällige Zahl (die sie erraten sollen) befindet sich allerdings zwischen " + min + " und " + max + ". Deshalb:");
-                }
 
-                // The input should be from min to max, nothing above. You can enter something above, I don't care. But it wont help you with the guessing...
-                else if (guessedNumber < min)
-                {
-                    Console.WriteLine("Sie können zwar eine Zahl unter " + min + " anegeben, die zufällige Zahl (die sie erraten sollen) befindet sich allerdings zwischen " + min + " und " + max + ". Deshalb:");
-                }
+                    // The input should be from min to max, nothing above. You can enter something above, I don't care. But it wont help you with the guessing...
+                    if (guessedNumber > max)
+                    {
+                        Console.WriteLine("Sie können zwar eine Zahl über " + max + " anegeben, die zufällige Zahl (die sie erraten sollen) befindet sich allerdings zwischen " + min + " und " + max + ". Deshalb:");
+                    }
 
-                // Compares the random number with the input
-                if (guessedNumber == randomNumber)
-                {
-                    // you guessed the number
-                    Console.WriteLine("Toll, das ist die richtige Zahl!");
-                    break;
-                }
+                    // The input should be from min to max, nothing above. You can enter something above, I don't care. But it wont help you with the guessing...
+                    else if (guessedNumber < min)
+                    {
+                        Console.WriteLine("Sie können zwar eine Zahl unter " + min + " anegeben, die zufällige Zahl (die sie erraten sollen) befindet sich allerdings zwischen " + min + " und " + max + ". Deshalb:");
+                    }
 
-                else if (guessedNumber > randomNumber)
-                {
-                    // guess is too great
-                    Console.WriteLine("Leider falsch, die Zahl ist kleiner");
-                }
+                    // Compares the random number with the input
+                    if (guessedNumber == randomNumber)
+                    {
+                        // you guessed the number
+                        Console.WriteLine("Toll, das ist die richtige Zahl!");
+                        break;
+                    }
 
-                else
-                {
-                    // guess is too litle
-                    Console.WriteLine("Leider falsch, die Zahl ist grösser");
+                    else if (guessedNumber > randomNumber)
+                    {
+                        // guess is too great
+                        Console.WriteLine("Leider falsch, die Zahl ist kleiner");
+                    }
+
+                    else
+                    {
+                        // guess is too litle
+                        Console.WriteLine("Leider falsch, die Zahl ist grösser");
+                    }
+
                 }
 
             }
