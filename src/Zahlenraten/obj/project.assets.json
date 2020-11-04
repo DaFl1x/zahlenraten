@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/felix/github/zahlenraten/src/Zahlenraten/Zahlenraten.csproj",
+      "projectUniqueName": "/home/felix/github/zahlenraten/Zahlenraten/src/Zahlenraten/Zahlenraten.csproj",
       "projectName": "Zahlenraten",
-      "projectPath": "/home/felix/github/zahlenraten/src/Zahlenraten/Zahlenraten.csproj",
+      "projectPath": "/home/felix/github/zahlenraten/Zahlenraten/src/Zahlenraten/Zahlenraten.csproj",
       "packagesPath": "/home/felix/.nuget/packages/",
-      "outputPath": "/home/felix/github/zahlenraten/src/Zahlenraten/obj/",
+      "outputPath": "/home/felix/github/zahlenraten/Zahlenraten/src/Zahlenraten/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/felix/.nuget/NuGet/NuGet.Config"

@@ -11,3 +11,16 @@
 /home/felix/github/zahlenraten/src/Zahlenraten/obj/Debug/netcoreapp3.1/Zahlenraten.dll
 /home/felix/github/zahlenraten/src/Zahlenraten/obj/Debug/netcoreapp3.1/Zahlenraten.pdb
 /home/felix/github/zahlenraten/src/Zahlenraten/obj/Debug/netcoreapp3.1/Zahlenraten.genruntimeconfig.cache
+/home/felix/github/zahlenraten/Zahlenraten/src/Zahlenraten/bin/Debug/netcoreapp3.1/Zahlenraten
+/home/felix/github/zahlenraten/Zahlenraten/src/Zahlenraten/bin/Debug/netcoreapp3.1/Zahlenraten.deps.json
+/home/felix/github/zahlenraten/Zahlenraten/src/Zahlenraten/bin/Debug/netcoreapp3.1/Zahlenraten.runtimeconfig.json
+/home/felix/github/zahlenraten/Zahlenraten/src/Zahlenraten/bin/Debug/netcoreapp3.1/Zahlenraten.runtimeconfig.dev.json
+/home/felix/github/zahlenraten/Zahlenraten/src/Zahlenraten/bin/Debug/netcoreapp3.1/Zahlenraten.dll
+/home/felix/github/zahlenraten/Zahlenraten/src/Zahlenraten/bin/Debug/netcoreapp3.1/Zahlenraten.pdb
+/home/felix/github/zahlenraten/Zahlenraten/src/Zahlenraten/obj/Debug/netcoreapp3.1/Zahlenraten.csprojAssemblyReference.cache
+/home/felix/github/zahlenraten/Zahlenraten/src/Zahlenraten/obj/Debug/netcoreapp3.1/Zahlenraten.AssemblyInfoInputs.cache
+/home/felix/github/zahlenraten/Zahlenraten/src/Zahlenraten/obj/Debug/netcoreapp3.1/Zahlenraten.AssemblyInfo.cs
+/home/felix/github/zahlenraten/Zahlenraten/src/Zahlenraten/obj/Debug/netcoreapp3.1/Zahlenraten.csproj.CoreCompileInputs.cache
+/home/felix/github/zahlenraten/Zahlenraten/src/Zahlenraten/obj/Debug/netcoreapp3.1/Zahlenraten.dll
+/home/felix/github/zahlenraten/Zahlenraten/src/Zahlenraten/obj/Debug/netcoreapp3.1/Zahlenraten.pdb
+/home/felix/github/zahlenraten/Zahlenraten/src/Zahlenraten/obj/Debug/netcoreapp3.1/Zahlenraten.genruntimeconfig.cache

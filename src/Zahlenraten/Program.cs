@@ -7,8 +7,8 @@ namespace Zahlenraten
         static void Main(string[] args)
         {
             // The min and max values aren't needed right now, but maybe in the future we want to easily increase the difficulty (or just time consumption) of this game
-            int min = 1; 
-            int max = 100;   
+            int min = -50; 
+            int max = 50;   
  
             // Generates a new random number between min and max
             Random random = new Random();
@@ -20,10 +20,22 @@ namespace Zahlenraten
             // Asks for you to input a number
             Console.WriteLine("Bitte geben sie eine Zahl von " + min + " bis " + max + " an:");
 
+            // Now you can't guess the number by entering text
+            int guessedNumber = min - 50;
+
             for (; ; )
             {
                 // Waits for the user to input a new number
-                int guessedNumber = Convert.ToInt32(Console.ReadLine());
+                try
+                {
+                    guessedNumber = Convert.ToInt32(Console.ReadLine());
+                }
+
+                catch
+                {
+                    // Error: User can't read instructions
+                    Console.WriteLine("Bitte geben sie nur Zahlen an!");
+                }
 
                 // The input should be from min to max, nothing above. You can enter something above, I don't care. But it wont help you with the guessing...
                 if (guessedNumber > max)
@@ -31,6 +43,7 @@ namespace Zahlenraten
                     Console.WriteLine("Sie können zwar eine Zahl über " + max + " anegeben, die zufällige Zahl (die sie erraten sollen) befindet sich allerdings zwischen " + min + " und " + max + ". Deshalb:");
                 }
 
+                // The input should be from min to max, nothing above. You can enter something above, I don't care. But it wont help you with the guessing...
                 else if (guessedNumber < min)
                 {
                     Console.WriteLine("Sie können zwar eine Zahl unter " + min + " anegeben, die zufällige Zahl (die sie erraten sollen) befindet sich allerdings zwischen " + min + " und " + max + ". Deshalb:");

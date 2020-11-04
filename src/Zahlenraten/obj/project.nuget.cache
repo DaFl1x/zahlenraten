@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "a3uTms7Xr3dIdHoTw7Ln5dGWc9LZHa79+M0YSLuDNgfVpi/YzmCcI3RUMBxtwuRQSrZMnAL+HkwMwuFeO7BvIQ==",
+  "dgSpecHash": "yZ8N8Fvy2ZLjPq0fUUuc/euAwePlhB2QIchH5erq7torCkHpMXCf3nY8C4Qnsc+eA4irl2H8BFREpekW7JUETw==",
   "success": true,
-  "projectFilePath": "/home/felix/github/zahlenraten/src/Zahlenraten/Zahlenraten.csproj",
+  "projectFilePath": "/home/felix/github/zahlenraten/Zahlenraten/src/Zahlenraten/Zahlenraten.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
