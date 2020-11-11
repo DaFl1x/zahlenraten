@@ -7,26 +7,24 @@ namespace Zahlenraten
         static void Main(string[] args)
         {
             // The min and max values aren't needed right now, but maybe in the future we want to easily increase the difficulty (or just time consumption) of this game
-            int min = 1; 
-            int max = 100;   
+            int min = 10; 
+            int max = 50;   
  
             // Generates a new random number between min and max
             Random random = new Random();
             int randomNumber = random.Next(min, max);
 
-            // Welcomes the user
-            Console.WriteLine("Willkommen beim Zahlenraten!");
+            Console.WriteLine("--== Willkommen beim Zahlenraten! ==--");
 
-            // Asks for you to input a number
+            // Asks for you to input a number from min to max
             Console.WriteLine("Bitte geben sie eine Zahl von " + min + " bis " + max + " an:");
 
-            // Now you can't guess the number by entering text
+            // This will be the automatic guessed number if text is entered
             int guessedNumber = 1;
 
             // Later on, if the input is not text, this boolean will be set to false
             bool inputIsText = true;
 
-            // Name says it all
             int trysNeeded = 0;
 
             for (; ; )
@@ -40,23 +38,21 @@ namespace Zahlenraten
 
                 catch
                 {
-                    // Error: User can't read instructions
                     Console.WriteLine("Bitte geben sie nur Zahlen an!");
                     inputIsText = true;
                 }
 
                 if (inputIsText == false)
                 {
-                    // Every time you input a number, it adds one try
                     trysNeeded = trysNeeded + 1;
 
-                    // The input should be from min to max, nothing above. You can enter something above, I don't care. But it wont help you with the guessing...
+                    // The input should be from min to max, nothing above. You can enter something above, it won't help you with the guessing...
                     if (guessedNumber > max)
                     {
                         Console.WriteLine("Sie können zwar eine Zahl über " + max + " anegeben, die zufällige Zahl (die sie erraten sollen) befindet sich allerdings zwischen " + min + " und " + max + ". Deshalb:");
                     }
 
-                    // The input should be from min to max, nothing above. You can enter something above, I don't care. But it wont help you with the guessing...
+                    // The input should be from min to max, nothing above. You can enter something above, it won't help you with the guessing...
                     else if (guessedNumber < min)
                     {
                         Console.WriteLine("Sie können zwar eine Zahl unter " + min + " anegeben, die zufällige Zahl (die sie erraten sollen) befindet sich allerdings zwischen " + min + " und " + max + ". Deshalb:");
@@ -86,7 +82,16 @@ namespace Zahlenraten
 
             }
 
-            Console.WriteLine("--== Bravo! Du hast " + trysNeeded + " Versuche gebraucht. ==--");
+            // I did this because "you did it in 1 trys" was not great to read
+            if (trysNeeded == 1)
+            {
+                Console.WriteLine("--== Wow! Du hast nur einen Versuch gebraucht. ==--");
+            }
+
+            else
+            {
+                Console.WriteLine("--== Bravo! Du hast " + trysNeeded + " Versuche gebraucht. ==--");
+            }
         }
     }
 }
